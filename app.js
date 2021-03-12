@@ -17,3 +17,22 @@ connection.connect((err) => {
     console.log(`connected as id ${connection.threadId}`);
     connection.end();
 });
+
+const mainQuestions = () => {
+    inquirer.prompt({
+        name: "action",
+      type: "list",
+      message: "MAIN MENU",
+      choices: [
+        "View all employees",
+        "View all employees by role",
+        "View all employees by department",
+        "View all employees by manager",
+        "Add employee",
+        "Add role",
+        "Add department",
+      ]
+    }).then((response) => {
+
+    })
+}
