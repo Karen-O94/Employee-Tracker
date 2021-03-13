@@ -67,10 +67,9 @@ const mainPrompt = () => {
       case 'Exit':
         exitApp();
         break;
-        
-      default:
-        console.log(`Invalid action: ${answer.action}`);
-        break;
+      // default:
+      //   console.log(`Invalid action: ${answer.action}`);
+      //   break;
     }
   });
 };
@@ -168,4 +167,113 @@ const addEmployee = () => {
       })
 
   });
+}
+
+function updateEmployee() {
+  connection.query("SELECT employee.last_name, role.title FROM employee JOIN role ON employee.role_id = role.id;", function (err, res) {
+    // console.log(res)
+    if (err) throw err
+    console.log(res)
+    inquirer.prompt([
+      {
+        name: "lastName",
+        type: "rawlist",
+        choices: function () {
+          var lastName = [];
+          for (var i = 0; i < res.length; i++) {
+            lastName.push(res[i].last_name);
+          }
+          return lastName;
+        },
+        message: "What is the Employee's last name? ",
+      },
+      {
+        name: "role",
+        type: "rawlist",
+        message: "What is the Employees new title? ",
+        choices: chooseRole()
+      },
+    ]).then(function (val) {
+      var roleId = chooseRole().indexOf(val.role) + 1
+      connection.query("UPDATE employee SET WHERE ?",
+        {
+          last_name: val.lastName
+
+        },
+        {
+          role_id: roleId
+
+        },
+        function (err) {
+          if (err) throw err
+          console.table(val)
+          mainPrompt()
+        })
+
+    });
+  });
+
+}
+//Add Employee Role
+const addRole = ()=> {
+  connection.query("SELECT role.title AS Title, role.salary AS Salary FROM role", function (err, res) {
+    inquirer.prompt([
+      {
+        name: "Title",
+        type: "input",
+        message: "What is the roles Title?"
+      },
+      {
+        name: "Salary",
+        type: "input",
+        message: "What is the Salary?"
+
+      }
+    ]).then(function (res) {
+      connection.query(
+        "INSERT INTO role SET ?",
+        {
+          title: res.Title,
+          salary: res.Salary,
+        },
+        function (err) {
+          if (err) throw err
+          console.table(res);
+          mainPrompt();
+        }
+      )
+
+    });
+  });
+}
+//Add Department//
+const addDept = () => {
+
+  inquirer.prompt([
+    {
+      name: "name",
+      type: "input",
+      message: "What Department would you like to add?"
+    }
+  ]).then(function (res) {
+    connection.query(
+      "INSERT INTO department SET ? ",
+      {
+        name: res.name
+
+      },
+      function (err) {
+        if (err) throw err
+        console.table(res);
+        mainPrompt();
+      }
+    )
+  })
+}
+
+
+const exitApp = () => {
+  console.log("Thank you for trying out the app")
+  connection.end();
+  process.exit;
 }

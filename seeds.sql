@@ -68,10 +68,10 @@ INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES ("Rosie", "Cole", 8, null);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Ola", "Suley", 1, 9);
+VALUES ("Ola", "Suley", 1, 3);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Sade", "Kelly", 1, 9);
+VALUES ("Sade", "Kelly", 1, 3);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES ("Tom", "Morris", 5, 4);
