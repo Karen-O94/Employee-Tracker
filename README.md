@@ -36,6 +36,8 @@ After running `node app.js` within the command line, the inquirer package will p
 
 The application takes in the user's reponses and populates the corresponding fields in the database.  For example,`first_name` is populated with the employee's first name.
 
+The `console.table` package prints out the data in a table format and you can view if an employee has been added or updated by clicking the view all employees option
+
 ## Final Product
 The Employee Tracker will allow a client to do the following actions:
  * Add departments, roles, employees
