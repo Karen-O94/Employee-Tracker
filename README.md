@@ -26,10 +26,11 @@ We do not have any test packages for this app but always check the error message
 ## Usage 
 
 *Gif of employee tracker in action*
+![EmployeeTrackerCompp](https://user-images.githubusercontent.com/74797740/111071533-84bc6280-84ce-11eb-9df3-a7ea6ca3e002.gif)
 
 *Please see the video walkthrough for this application below*
 
-[Google Drive Link to video walkthrough]()
+[Google Drive Link to video walkthrough](https://drive.google.com/file/d/1yfLiJIzo16Om3I8RG4aV6UGzJFSbFpeU/view?usp=sharing)
 
 After running `node app.js` within the command line, the inquirer package will prompt users to answer a series of questions based on their team. 
 
