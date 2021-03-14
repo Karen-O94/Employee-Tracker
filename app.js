@@ -113,7 +113,7 @@ const selectRole = () => {
   return roleArr;
 }
 
-//Select
+//Selecting employee's manager
 var managersArr = [];
 selectManager = () => {
   connection.query("SELECT first_name, last_name FROM employee WHERE manager_id IS NULL", function(err, res) {
@@ -147,7 +147,7 @@ const addEmployee = () => {
         {
             name: "choice",
             type: "rawlist",
-            message: "Whats their managers name? Press Enter key if there is no manager",
+            message: "Whats their manager's name? Press Enter key if there is no manager",
             choices: selectManager()
         }
     ]).then(function (val) {
@@ -209,7 +209,7 @@ const addEmployee = () => {
         })
 };
 //Add Employee Role 
-function addRole() {
+const addRole = () => {
   connection.query("SELECT * FROM department", function(err, res) {
   if (err) throw err;
   inquirer
@@ -260,7 +260,7 @@ function addRole() {
 };
 
 //Add Department
-function addDept() { 
+const addDept =() { 
 
     inquirer.prompt([
         {
