@@ -20,7 +20,7 @@ The mysql package connects you directly to the database created in the MySQL Wor
 
 Once all the dependencies are installed, you can initialise the application itself by running `node app.js` in the command line
 
- ## Test
+## Test
 We do not have any test packages for this app but always check the error messages within terminals and debug using console.log(s). 
  
 ## Usage 
@@ -33,7 +33,7 @@ We do not have any test packages for this app but always check the error message
 
 After running `node app.js` within the command line, the inquirer package will prompt users to answer a series of questions based on their team. 
 
-The application takes in the user's reponses and populates the corresponding fields in the database.  For example,`first_name` is populated with the employee's first name
+The application takes in the user's reponses and populates the corresponding fields in the database.  For example,`first_name` is populated with the employee's first name.
 
 ## Final Product
 The Employee Tracker will allow a client to do the following actions:
@@ -47,3 +47,12 @@ The Employee Tracker will allow a client to do the following actions:
 > This project was created under the standard MIT licence.
 
 > [Learn more about this licence.](https://lbesson.mit-license.org/)
+
+
+## Questions?
+
+Please contact me on the links below if you have any queries on how the application works or to view my other projects:
+
+My GitHub username is Karen-O94 
+
+Link to GitHub Profile: https://github.com/Karen-O94
