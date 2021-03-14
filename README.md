@@ -3,9 +3,9 @@ A command-line application that at a minimum allows the user to  add, view and u
 
 ## Screenshots
 *Command line*
-![image]()
+![image](https://user-images.githubusercontent.com/74797740/111069821-c0ebc500-84c6-11eb-8e60-29c2c58899fe.png)
 
-![image]()
+![image](https://user-images.githubusercontent.com/74797740/111069878-0b6d4180-84c7-11eb-9b2c-588296bbae7c.png)
 
 ## Installation
 In order to use the employee tracker, you will need to run `npm init -y` to initialise the `package.json ` and then install the following list of dependencies:
@@ -36,13 +36,10 @@ After running `node app.js` within the command line, the inquirer package will p
 The application takes in the user's reponses and populates the corresponding fields in the database.  For example,`first_name` is populated with the employee's first name
 
 ## Final Product
-The Employee should be able to show the following:
-
-    - Navbar with team name
-    - Generates a card for each team member with their name, their role and id
-    - Manager should also have an office number
-    - Engineer should have a github username
-    - Intern should also a school name --> -->
+The Employee Tracker will allow a client to do the following actions:
+ * Add departments, roles, employees
+ * View departments, roles, employees
+ * Update employee roles
 
 ## License
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
