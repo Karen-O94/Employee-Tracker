@@ -271,8 +271,8 @@ function addDept() {
   }
 
 
-// const exitApp = () => {
-//   console.log("Thank you for trying out the app")
-//   connection.end();
-//   process.exit;
-// }
+const exitApp = () => {
+  console.log("Thank you for trying out the app")
+  connection.end();
+  process.exit;
+}
